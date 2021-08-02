@@ -21,3 +21,5 @@ int main() {
     cout << caller(a, b, &subtract);
     return 0;
 }
+
+// nptel week1 assignment 2
