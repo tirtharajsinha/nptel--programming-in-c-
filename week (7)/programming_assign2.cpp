@@ -10,19 +10,18 @@ class String
     int n;
 
 public:
-    String(int k) : n(k) { cout << n << "ii "; } //LINE-1
-    operator char()
+    String(int k) : n(k), arr(new char[k]) {} //LINE-1
+    operator int()
     { //LINE-2
-        cout << 1 << " ";
+
         return arr[--n];
     }
 
-    operator char *()
+    String &operator=(int k)
     { //LINE-3
         char t;
-        cout << "2"
-             << " ";
-        for (int j = 0; j < 4; j++)
+
+        for (int j = 0; j < k; j++)
         {
             cin >> t;
             this->arr[j] = t;
@@ -38,7 +37,7 @@ int main()
     s = k;
     for (int i = 0; i < k; i++)
     {
-        cout << i << " ";
+
         cout << static_cast<char>(s) << " ";
     }
 

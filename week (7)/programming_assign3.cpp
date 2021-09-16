@@ -22,7 +22,7 @@ public:
         cout << b;
     }
 
-    B(int x)
+    int operator=(int x)
     { //LINE-1
         b = b + x;
     }
