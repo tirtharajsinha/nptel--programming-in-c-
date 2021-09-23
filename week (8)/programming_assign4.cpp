@@ -20,8 +20,8 @@ public:
 
 //LINE 1
 
-template <class T>
-T Adder<T>
+template <>
+class Adder<Point>
 { //LINE-2
 
     Point n;
@@ -32,8 +32,7 @@ public:
     friend ostream &operator<<(ostream &os, const Point &p);
 };
 
-template <class T>
-T Adder<T>::add()
+Point Adder<Point>::add(const int &t)
 { //LINE-3
 
     Point res;
